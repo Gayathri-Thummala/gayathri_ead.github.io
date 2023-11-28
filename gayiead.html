@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+        }
+
+        header {
+            background-color: yellow; /* Change the color to yellow */
+            padding: 1em;
+            text-align: center;
+            color: white;
+        }
+
+        nav {
+            background-color: #f1f1f1;
+            padding: 1em;
+        }
+
+        nav a {
+            margin-right: 15px;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+
+        section {
+            position: relative;
+            padding: 20px;
+            text-align: center; /* Center text */
+        }
+
+        section img,
+        section video {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 20px auto; /* Center image and video with some spacing */
+        }
+
+        section .image-text {
+            position: absolute;
+            top: 20%; /* Center text vertically */
+            left: 50%; /* Center text horizontally */
+            transform: translate(-50%, -50%); /* Center text precisely */
+            color: red ;
+            font-size: 18px;
+            line-height: 1.5;
+            text-align: center; /* Center text within the image */
+        }
+
+        table {
+            width: 100%;
+            margin-top: 20px;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #333;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Welcome to My Page</h1>
+</header>
+
+<nav>
+    <a href="#" id="homeBtn">Home</a>
+    <a href="#" id="courseBtn">My Courses</a>
+    <a href="#" id="contactBtn">Contact</a>
+</nav>
+
+<section id="content">
+    <h2>Home</h2>
+    <img src="C:\Users\gthum\Downloads\flat-lay-workstation-with-copy-space-laptop.jpg" alt="Fall image">
+    <div class="image-text">
+        <p>Hello, and welcome to my personal page! My name is Gayathri Tummala, and I'm thrilled to share a glimpse into my world with you. As a student, I am passionate about coding, design, or exploring the latest in technology. I'm always eager to learn and create.</p>
+        <p>Thank you for stopping by, and enjoy your time exploring my personal corner of the web!</p>
+    </div>
+    <!-- Add text on the image and then the video -->
+    <p>Check out this video:</p>
+    <video controls>
+        <source src="C:\Users\gthum\Downloads\WhatsApp Video 2023-11-20 at 23.36.36_7f3d55e2.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+</section>
+
+<section id="courses" style="display: none;">
+    <h2>My Courses</h2>
+    <p>Here are some of the subjects I specialize in:</p>
+
+    <!-- Add Table -->
+    <table>
+        <thead>
+            <tr>
+                <th>Subject</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Information Systems Strategy and Policy</td>
+            </tr>
+            <tr>
+                <td>Enterprise Application Development</td>
+            </tr>
+            <tr>
+                <td>Introduction to Financial Accounting</td>
+            </tr>
+            <tr>
+                <td>Business Database Technology</td>
+            </tr>
+            <tr>
+                <td>Statistics for Management-R</td>
+            </tr>
+            <!-- Add more rows as needed -->
+        </tbody>
+    </table>
+</section>
+
+<section id="contact" style="display: none;">
+    <h2>Contact</h2>
+    <form id="contact-form">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+
+        <button type="submit">Send Message</button>
+    </form>
+</section>
+
+<script>
+    // JavaScript to handle button clicks and change content
+    document.getElementById('homeBtn').addEventListener('click', function() {
+        document.getElementById('content').style.display = 'block';
+        document.getElementById('courses').style.display = 'none';
+        document.getElementById('contact').style.display = 'none';
+    });
+
+    document.getElementById('courseBtn').addEventListener('click', function() {
+        document.getElementById('content').style.display = 'none';
+        document.getElementById('courses').style.display = 'block';
+        document.getElementById('contact').style.display = 'none';
+    });
+
+    document.getElementById('contactBtn').addEventListener('click', function() {
+        document.getElementById('content').style.display = 'none';
+        document.getElementById('courses').style.display = 'none';
+        document.getElementById('contact').style.display = 'block';
+    });
+</script>
+
+<footer>
+    <p>&copy; 2023 My Personal Page</p>
+</footer>
+
+</body>
+</html>
